@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NavigationBar } from "./components/NavigationBar";
-import { Home } from "./components/Home";
+import { Home } from "./style/Home";
 import { AllNews } from "./components/AllNews";
 import { Weather } from "./components/Weather";
 import { RegistrationForm } from "./components/RegistrationForm";
