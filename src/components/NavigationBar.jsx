@@ -5,15 +5,15 @@ export function NavigationBar(){
     return (
         <Navbar expand="lg" bg="dark" data-bs-theme="dark">
       <Container>
-        <Navbar.Brand href="#home">News App</Navbar.Brand>
+        <Navbar.Brand href="#home">ANG Martial Arts Academy</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <LinkContainer to="/">
             <Nav.Link>Home</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/all-news">
-            <Nav.Link>All News</Nav.Link>
+            <LinkContainer to="/instructor">
+            <Nav.Link>Instructor</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/weather">
             <Nav.Link>Weather</Nav.Link>
