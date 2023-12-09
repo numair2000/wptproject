@@ -5,6 +5,7 @@ import { AllNews } from "./components/AllNews";
 import { Weather } from "./components/Weather";
 import { RegistrationForm } from "./components/RegistrationForm";
 import { Contact } from "./components/Contact";
+import { Footer } from "./style/Footer";
 function App() {
   return (
     <BrowserRouter>
@@ -16,6 +17,7 @@ function App() {
       <Route path="/registration-form" element={<RegistrationForm/>}></Route>
       <Route path="/contact-us" element={<Contact/>}></Route>
     </Routes>
+    <Footer></Footer>
     </BrowserRouter>
   );
 }
