@@ -2,8 +2,8 @@ import Accordion from "react-bootstrap/Accordion";
 import img30 from "../images/vijay.jpg";
 import img20 from "../images/glenn.jpg";
 import img40 from "../images/karate1.jpeg";
-import img50 from "../images/numair.jpg";
-import img60 from "../images/karate1.jpeg";
+import img50 from "../images/Numair formal photo new.png";
+import img60 from "../images/gourav.jpg";
 export function Instructor() {
   return (
     <div>

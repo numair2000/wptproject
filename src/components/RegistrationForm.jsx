@@ -184,9 +184,9 @@ export const RegistrationForm = () => {
         <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
         <FormCheck
         type="checkbox" 
-        label="To learn Mua-Thai"
+        label="To learn Muay-Thai"
         name="goals"
-        onChange={()=>handleCheckboxChange("Learn Mua-Thai")}
+        onChange={()=>handleCheckboxChange("Learn Muay-Thai")}
         />
         <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
         <FormCheck

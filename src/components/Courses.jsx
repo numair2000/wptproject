@@ -36,7 +36,7 @@ export function Courses(){
                 <li>Fees : 12000(yearly)</li>
                 </ol>
             </ul>
-            <li>Mua-Thai</li>
+            <li>Muay-Thai</li>
             <ul>
                 <li>Plans</li>
                 <ol>
