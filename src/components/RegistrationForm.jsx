@@ -1,191 +1,5 @@
-// import { useEffect, useState } from "react";
-// import { Button, Container, Form} from "react-bootstrap";
-
-// export const RegistrationForm = () => {
-//   const [formData, setFormData] = useState({
-//     name: '',
-//     age: '',
-//     email: '',
-//     password: '',
-//     confirmPassword: '',
-//     pastInjuries: '',
-//     experience: '',
-//     height: '',
-//     weight: '',
-//     foodAllergies: '',
-//     medicalProblems: '',
-//     goals: []
-//   });
-
-  
-//   const [registeredCount, setRegisteredCount] = useState(0);
-
-  
-
-
-//   const fetchRegisteredStudents = async () => {
-//     try {
-//       const response = await fetch('http://localhost:3385/register');
-//       const data = await response.json();
-
-//       if (response.ok) {
-//         fetchRegisteredStudents(data.students);
-//       } else {
-//         console.error('Failed to fetch registered students:', data.message);
-//       }
-//     } catch (error) {
-//       console.error('Error fetching registered students:', error);
-//     }
-//   };
-
-//   useEffect(() => {
-    
-//     fetchRegisteredCount();
-//   }, []);
-
- 
-//   const fetchRegisteredCount = async () => {
-//     try {
-//       const response = await fetch('http://localhost:3385/register');
-//       const data = await response.json();
-
-//       if (response.ok) {
-//         setRegisteredCount(data.count);
-//       } else {
-//         console.error('Failed to fetch registered count:', data.message);
-//       }
-//     } catch (error) {
-//       console.error('Error fetching registered count:', error);
-//     }
-//   };
-
-
-//   const handleChange = (e) => {
-//     const { name, value } = e.target;
-//     setFormData({
-//       ...formData,
-//       [name]: value,
-//     });
-//   };
-
-//   const handleCheckboxChange = (goal) => {
-//     const updatedGoals = [...formData.goals];
-
-//     if (updatedGoals.includes(goal)) {
-//       updatedGoals.splice(updatedGoals.indexOf(goal), 1);
-//     } else {
-//       updatedGoals.push(goal);
-//     }
-
-//     setFormData({
-//       ...formData,
-//       goals: updatedGoals,
-//     });
-//   };
-
- 
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-
-//     try {
-//       const response = await fetch('http://localhost:3385/register', {
-//         method: 'POST',
-//         headers: {
-//           'Content-Type': 'application/json',
-//         },
-//         body: JSON.stringify(formData),
-//       });
-
-//       const data = await response.json();
-
-//       if (response.ok) {
-//        window.alert("Successfully Registered")
-//         console.log('Registration successful:', data);
-//         setRegisteredCount((prevCount) => prevCount + 1);
-       
-//         // You can redirect the user or perform other actions after successful registration
-//       } else {
-//         console.error('Registration failed:', data.message);
-//         // Handle registration failure, show an error message, etc.
-//       }
-//     } catch (error) {
-//       console.error('Error during registration:', error);
-//     }
-//   };
-
-  
-//   return (
-//     <Container className="mt-4">
-//       <h4>Registration Form</h4>
-//       <Form className="mt-5" onSubmit={handleSubmit}>
-        // <Form.Group className="mb-3" controlId="formBasicName">
-        //   <Form.Label>Enter Your Name</Form.Label>
-        //   <Form.Control type="text" placeholder="Enter your name" name="name" onChange={handleChange} />
-        // </Form.Group>
-        // <Form.Group className="mb-3" controlId="formBasicAge">
-        //   <Form.Label>Enter Your Age</Form.Label>
-        //   <Form.Control type="text" placeholder="Enter your age" name="age" onChange={handleChange} />
-        // </Form.Group>
-        // <Form.Group className="mb-3" controlId="formBasicEmail">
-        //   <Form.Label>Email address</Form.Label>
-        //   <Form.Control type="email" placeholder="Enter email" name="email" onChange={handleChange} />
-        // </Form.Group>
-        // <Form.Group className="mb-3" controlId="formBasicName">
-        //   <Form.Label>Any Past Injuries</Form.Label>
-        //   <Form.Control type="text" placeholder="Enter your injuries" name="pastInjuries" onChange={handleChange} />
-        // </Form.Group>
-        // <Form.Group className="mb-3" controlId="formBasicName">
-        //   <Form.Label>Any Past Experience</Form.Label>
-        //   <Form.Control type="text" placeholder="Enter your experience" name="experience" onChange={handleChange} />
-        // </Form.Group>
-        // <Form.Group className="mb-3" controlId="formBasicName">
-        //   <Form.Label>Enter Your Height</Form.Label>
-        //   <Form.Control type="text" placeholder="Enter your height" name="height" onChange={handleChange} />
-        // </Form.Group>
-        // <Form.Group className="mb-3" controlId="formBasicName">
-        //   <Form.Label>Enter Your weight</Form.Label>
-        //   <Form.Control type="text" placeholder="Enter your weight" name="weight" onChange={handleChange} />
-        // </Form.Group>
-        // <Form.Group className="mb-3" controlId="formBasicName">
-        //   <Form.Label>Enter Your Food allergies</Form.Label>
-        //   <Form.Control type="text" placeholder="Enter your allergies" name="foodAllergies" onChange={handleChange} />
-        // </Form.Group>
-        // <Form.Group className="mb-3" controlId="formBasicName">
-        //   <Form.Label>Enter Your Mediacal Problems</Form.Label>
-        //   <Form.Control type="text" placeholder="Enter your Medical Problems" name="medicalProblems" onChange={handleChange} />
-        // </Form.Group>
-        // {/* Add the rest of your Form.Group components here */}
-        // <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        //   <Form.Check
-        //     type="checkbox"
-        //     label="To learn karate"
-        //     name="goals"
-        //     onChange={() => handleCheckboxChange("Learn Karate") }
-        //   />
-        //   <Form.Check
-        //     type="checkbox"
-        //     label="To learn to live a disciplined life"
-        //     name="goals"
-        //     onChange={() => handleCheckboxChange("Live a Disciplined Life")}
-//           />
-//           {/* Add similar lines for other goals */}
-//         </Form.Group>
-//         <Button variant="primary" type="submit" >
-//           Submit
-//         </Button>
-//         <p>{registeredCount} candidates have registered so far.</p>
-
-        
-       
-//       </Form>
-      
-//     </Container>
-//   );
-// };
-
 import React, { useState, useEffect } from "react";
-import { Button, Container, Form, Table } from "react-bootstrap";
+import { Button, Container, Form, FormCheck, Table } from "react-bootstrap";
 
 export const RegistrationForm = () => {
   const [formData, setFormData] = useState({
@@ -353,14 +167,50 @@ export const RegistrationForm = () => {
             name="goals"
             onChange={() => handleCheckboxChange("Learn Karate")}
           />
+          <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
           <Form.Check
             type="checkbox"
-            label="To learn to live a disciplined life"
+            label="To learn Boxing"
             name="goals"
-            onChange={() => handleCheckboxChange("Live a Disciplined Life")}
+            onChange={() => handleCheckboxChange("Learn Boxing")}
           />
+          <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
+          <FormCheck
+        type="checkbox" 
+        label="To learn Kick-Boxing"
+        name="goals"
+        onChange={()=>handleCheckboxChange("Learn Kick-Boxing")}
+        />
+        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
+        <FormCheck
+        type="checkbox" 
+        label="To learn Mua-Thai"
+        name="goals"
+        onChange={()=>handleCheckboxChange("Learn Mua-Thai")}
+        />
+        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
+        <FormCheck
+        type="checkbox" 
+        label="To train"
+        name="goals"
+        onChange={()=>handleCheckboxChange("To Train")}
+        />
+        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
+        <FormCheck
+        type="checkbox" 
+        label="To learn Karate+Kick-Boxing"
+        name="goals"
+        onChange={()=>handleCheckboxChange("Learn Karate+Kick-Boxing")}
+        />
+        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
+        <FormCheck
+        type="checkbox" 
+        label="Fat Loss Program"
+        name="goals"
+        onChange={()=>handleCheckboxChange("Fat Loss Program")}
+        />
+        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
         </Form.Group>
-
         <Button variant="primary" onClick={handleRegister}>
           Add
         </Button>

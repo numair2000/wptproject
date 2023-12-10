@@ -8,26 +8,7 @@ export function Footer() {
       <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
        
 
-        <div>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="facebook-f" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="twitter" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="google" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="instagram" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="linkedin" />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="github" />
-          </a>
-        </div>
+       
       </section>
 
       <section className=''>
@@ -36,64 +17,58 @@ export function Footer() {
             <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>
                 <MDBIcon icon="gem" className="me-3" />
-                Company name
+                Martial Art Academy
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
-                consectetur adipisicing elit.
+              Customers of ANG Martial Arts Academy are welcome to review this website. Tell me how you good and needful this mission.
               </p>
             </MDBCol>
 
             <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Products</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>About</h6>
               <p>
                 <a href='#!' className='text-reset'>
-                  Angular
+                  About Us
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  React
+                  Contact Us
                 </a>
               </p>
               <p>
                 <a href='#!' className='text-reset'>
-                  Vue
-                </a>
-              </p>
-              <p>
-                <a href='#!' className='text-reset'>
-                  Laravel
+                  Mail Us
                 </a>
               </p>
             </MDBCol>
 
             <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Useful links</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>SOCIAL</h6>
               <p>
-                <a href='#!' className='text-reset'>
-                  Pricing
+                <a href='https://www.linkedin.com/' className='text-reset'>
+                  linkedin
                 </a>
               </p>
               <p>
-                <a href='#!' className='text-reset'>
-                  Settings
+                <a href='https://www.facebook.com/' className='text-reset'>
+                  Facebook
                 </a>
               </p>
               <p>
-                <a href='#!' className='text-reset'>
-                  Orders
+                <a href='https://www.Instagram.com/' className='text-reset'>
+                  Instagram
                 </a>
               </p>
               <p>
-                <a href='#!' className='text-reset'>
-                  Help
+                <a href='https://www.twitter.com/' className='text-reset'>
+                  Twitter
                 </a>
               </p>
             </MDBCol>
 
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
-              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+              <h6 className='text-uppercase fw-bold mb-4'>Registered Office Address:</h6>
               <p>
                 <MDBIcon icon="home" className="me-2" />
                  East Mumbai, NY 10012, INDIA
@@ -115,7 +90,7 @@ export function Footer() {
 
       <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         © 2023 Copyright:
-        <a className='text-reset fw-bold' href='#'>
+        <a className='text-reset fw-bold'>
           MartialArtAcademy.com
         </a>
       </div>

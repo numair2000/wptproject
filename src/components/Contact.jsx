@@ -1,53 +1,117 @@
-import { Button, Col, Container, Form, Row } from "react-bootstrap";
+// src/components/ContactUsAndSuggestionForm.js
+import React, { useState } from "react";
+import { Button, Container, Form, Row, Col } from "react-bootstrap";
 
-export function Contact() {
-    return (
-        <Container className="mt-5">
-            <Row>
-                <Col sm="4">
-                    <h4>Address</h4>
-                    <p>Martial Arts Academy, Road no 12, Beside Heritage Hotel,Mumbai, Mahrashtra, 400024</p>
-                </Col>
-                <Col sm="4">
-                    <h4>Phone number and Email</h4>
-                    <p>Mob 1 - xxxxxxxxxx</p>
-                    <p>Mob 2 - xxxxxxxxxx</p>
-                    <p>Mob 3 - xxxxxxxxxx</p>
-                    <p>Email - martialartsacademy@gmail.com </p>
-                </Col>
-                <Col sm="4">
-                    <h4>Social Media Links</h4>
-                    <p>Facebook</p>
-                    <p>Instagram</p>
-                    <p>Twitter</p>
-                </Col>
-            </Row>
-            <div className="mt-5">
-                <h2>Suggestion / Grievance form</h2>
-                <Form className="mt-5">
-                    <Form.Group className="mb-3" controlId="formBasicName">
-                        <Form.Label>Name</Form.Label>
-                        <Form.Control type="text" placeholder="Enter your name" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" />
-                        
-                    </Form.Group>
+export const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    suggestion: '',
+    grievance: '',
+  });
 
-                    <Form.Group className="mb-3" controlId="formBasicSuggestion">
-                        <Form.Label>Suggestions</Form.Label>
-                        <Form.Control type="text" placeholder="Enter your suggestion and help us improve" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicGrievance">
-                        <Form.Label>Grievance / Complaints</Form.Label>
-                        <Form.Control type="text" placeholder="Enter details here if we are not up to your expectations" />
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                        Submit
-                    </Button>
-                </Form>
-            </div>
-        </Container>
-    );
-}
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Implement the API endpoint for handling suggestions
+      const response = await fetch('http://localhost:3302/submitSuggestion', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        window.alert("Suggestion submitted successfully");
+        console.log('Suggestion submitted successfully:', data);
+      } else {
+        console.error('Suggestion submission failed:', data.message);
+      }
+    } catch (error) {
+      console.error('Error during suggestion submission:', error);
+    }
+  };
+
+  return (
+    <Container className="mt-4">
+      <Row className="mt-3">
+        <Col xs={3}>
+          <h4> Martial Art Academy</h4>
+          <p>Customers of ANG Martial Arts Academy are welcome to review this website. Tell me how you good and needful this mission.</p>
+          </Col>
+        <Col xs={3}>
+          <h4>Address</h4>
+          </Col>
+        <Col xs={3}>
+          <h4>Phone Number</h4>
+          </Col>
+        <Col xs={3}>
+          <h4>Social Media Links</h4>
+          </Col>
+        <Col>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="formName">
+              <Form.Label>Your Name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter your name"
+                name="name"
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
+            <Form.Group controlId="formEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                name="email"
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
+            <Form.Group controlId="formSuggestion">
+              <Form.Label>Suggestion</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="Enter your suggestion"
+                name="suggestion"
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
+            <Form.Group controlId="formGrievance">
+              <Form.Label>Grievance</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="Enter your grievance"
+                name="grievance"
+                onChange={handleChange}
+                required
+              />
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+

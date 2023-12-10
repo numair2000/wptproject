@@ -15,8 +15,11 @@ export function NavigationBar(){
             <LinkContainer to="/instructor">
             <Nav.Link>Instructor</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/weather">
-            <Nav.Link>Weather</Nav.Link>
+            <LinkContainer to="/courses">
+            <Nav.Link>Courses</Nav.Link>
+            </LinkContainer>
+            <LinkContainer to="/facilities">
+            <Nav.Link>Facilities</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/registration-form">
             <Nav.Link>Register</Nav.Link>
