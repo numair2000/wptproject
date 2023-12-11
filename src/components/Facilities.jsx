@@ -2,6 +2,9 @@ import { Button, Card, Col, Container, Row } from "react-bootstrap";
 import img1 from '../images/karate1.jpeg'
 import img2 from '../images/swim.jpeg'
 import img3 from '../images/court.jpeg'
+import img4 from '../images/supplement.jpg'
+import img5 from '../images/food1.jpeg'
+import img6 from '../images/food2.png'
 import '../style/TopHeadlines.css'
 
 
@@ -50,7 +53,7 @@ export function Facilities(){
       <Row className='mt-5'>
         <Col>
         <Card style={{ width: '18rem' }}>
-      <Card.Img className="img1" variant="top" src={img1} />
+      <Card.Img className="img1" variant="top" src={img4} />
       <Card.Body>
         <Card.Title>Supplement Store</Card.Title>
         <Card.Text>
@@ -62,7 +65,7 @@ export function Facilities(){
     </Col>
         <Col>
         <Card style={{ width: '18rem' }}>
-      <Card.Img className="img1" variant="top" src={img1} />
+      <Card.Img className="img1" variant="top" src={img5} />
       <Card.Body>
         <Card.Title>Food Court</Card.Title>
         <Card.Text>
@@ -74,7 +77,7 @@ export function Facilities(){
         </Col>
         <Col>
         <Card style={{ width: '18rem' }}>
-      <Card.Img className="img1" variant="top" src={img1} />
+      <Card.Img className="img1" variant="top" src={img6} />
       <Card.Body>
         <Card.Title>Help Desk</Card.Title>
         <Card.Text>

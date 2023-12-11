@@ -15,6 +15,11 @@ import img12 from '../images/boxing4.jpeg'
 import img13 from '../images/kickboxing.jpeg'
 import img14 from '../images/muay.jpeg'
 import img15 from '../images/teakwondo.jpeg'
+import img21 from '../images/certificate4.jpg'
+import img22 from '../images/slider1.jpg'
+import img23 from '../images/slider2.jpg'
+import img24 from '../images/slider3.jpg'
+import img25 from '../images/slider4.jpg'
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import '../style/TopHeadlines.css'
 
@@ -38,6 +43,46 @@ export function Home() {
       <img style={{height:'90vh'}}
         className="d-block w-100"
         src={img2}
+        alt="Second slide"
+      />
+       <Carousel.Caption>
+        
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item className='cor1'>
+      <img style={{height:'90vh'}}
+        className="d-block w-100"
+        src={img22}
+        alt="Second slide"
+      />
+       <Carousel.Caption>
+        
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item className='cor1'>
+      <img style={{height:'90vh'}}
+        className="d-block w-100"
+        src={img23}
+        alt="Second slide"
+      />
+       <Carousel.Caption>
+        
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item className='cor1'>
+      <img style={{height:'90vh'}}
+        className="d-block w-100"
+        src={img24}
+        alt="Second slide"
+      />
+       <Carousel.Caption>
+        
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item className='cor1'>
+      <img style={{height:'90vh'}}
+        className="d-block w-100"
+        src={img25}
         alt="Second slide"
       />
        <Carousel.Caption>
@@ -150,7 +195,7 @@ export function Home() {
         <Row className='mt-5'>
         <Col>
         <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={img15} />
+      <Card.Img variant="top" src={img1} />
     </Card>
     </Col>
         <Col xs={7}>
@@ -195,7 +240,13 @@ export function Home() {
         <Card style={{ width: '18rem' }}>
       <Card.Img className='col3' variant="top" src={img8} />
     </Card>
-        </Col>
+    </Col>
+    
+    <Col xs={3}>
+        <Card style={{ width: '18rem' }}>
+      <Card.Img className='col5' variant="top" src={img21} />
+    </Card>
+    </Col>
         </Row>
        
         </Container>

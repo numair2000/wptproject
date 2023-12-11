@@ -12,7 +12,7 @@ export const RegistrationForm = () => {
     weight: '',
     foodAllergies: '',
     medicalProblems: '',
-     goals: []
+    goals: []
   });
 
   const [registeredStudents, setRegisteredStudents] = useState([]);
@@ -38,7 +38,7 @@ export const RegistrationForm = () => {
 
   const handleRegister = async () => {
     try {
-      // Validate required fields
+
       const requiredFields = ['name', 'age', 'email'];
       const missingFields = requiredFields.filter(field => !formData[field]);
 
@@ -47,7 +47,7 @@ export const RegistrationForm = () => {
         return;
       }
 
-      // Add your additional validation logic here
+
 
       const response = await fetch('http://localhost:3302/register', {
         method: 'POST',
@@ -167,52 +167,52 @@ export const RegistrationForm = () => {
             name="goals"
             onChange={() => handleCheckboxChange("Learn Karate")}
           />
-          <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
+          <input onChange={() => handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={() => handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={() => handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={() => handleCheckboxChange("Yearly")} type="radio" />Yearly
           <Form.Check
             type="checkbox"
             label="To learn Boxing"
             name="goals"
             onChange={() => handleCheckboxChange("Learn Boxing")}
           />
-          <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
+          <input onChange={() => handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={() => handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={() => handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={() => handleCheckboxChange("Yearly")} type="radio" />Yearly
           <FormCheck
-        type="checkbox" 
-        label="To learn Kick-Boxing"
-        name="goals"
-        onChange={()=>handleCheckboxChange("Learn Kick-Boxing")}
-        />
-        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
-        <FormCheck
-        type="checkbox" 
-        label="To learn Muay-Thai"
-        name="goals"
-        onChange={()=>handleCheckboxChange("Learn Muay-Thai")}
-        />
-        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
-        <FormCheck
-        type="checkbox" 
-        label="To train"
-        name="goals"
-        onChange={()=>handleCheckboxChange("To Train")}
-        />
-        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
-        <FormCheck
-        type="checkbox" 
-        label="To learn Karate+Kick-Boxing"
-        name="goals"
-        onChange={()=>handleCheckboxChange("Learn Karate+Kick-Boxing")}
-        />
-        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
-        <FormCheck
-        type="checkbox" 
-        label="Fat Loss Program"
-        name="goals"
-        onChange={()=>handleCheckboxChange("Fat Loss Program")}
-        />
-        <input onChange={()=>handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={()=>handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={()=>handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={()=>handleCheckboxChange("Yearly")} type="radio" />Yearly
+            type="checkbox"
+            label="To learn Kick-Boxing"
+            name="goals"
+            onChange={() => handleCheckboxChange("Learn Kick-Boxing")}
+          />
+          <input onChange={() => handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={() => handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={() => handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={() => handleCheckboxChange("Yearly")} type="radio" />Yearly
+          <FormCheck
+            type="checkbox"
+            label="To learn Muay-Thai"
+            name="goals"
+            onChange={() => handleCheckboxChange("Learn Muay-Thai")}
+          />
+          <input onChange={() => handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={() => handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={() => handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={() => handleCheckboxChange("Yearly")} type="radio" />Yearly
+          <FormCheck
+            type="checkbox"
+            label="To train"
+            name="goals"
+            onChange={() => handleCheckboxChange("To Train")}
+          />
+          <input onChange={() => handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={() => handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={() => handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={() => handleCheckboxChange("Yearly")} type="radio" />Yearly
+          <FormCheck
+            type="checkbox"
+            label="To learn Karate+Kick-Boxing"
+            name="goals"
+            onChange={() => handleCheckboxChange("Learn Karate+Kick-Boxing")}
+          />
+          <input onChange={() => handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={() => handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={() => handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={() => handleCheckboxChange("Yearly")} type="radio" />Yearly
+          <FormCheck
+            type="checkbox"
+            label="Fat Loss Program"
+            name="goals"
+            onChange={() => handleCheckboxChange("Fat Loss Program")}
+          />
+          <input onChange={() => handleCheckboxChange("Monthly")} type="radio" />Monthly <input onChange={() => handleCheckboxChange("Quaterly")} type="radio" />Quaterly  <input onChange={() => handleCheckboxChange("Half-yearly")} type="radio" />Half-Yearly  <input onChange={() => handleCheckboxChange("Yearly")} type="radio" />Yearly
         </Form.Group>
         <Button variant="primary" onClick={handleRegister}>
-          Add
+          Register
         </Button>
       </Form>
 

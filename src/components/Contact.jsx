@@ -1,4 +1,4 @@
-// src/components/ContactUsAndSuggestionForm.js
+
 import React, { useState } from "react";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 
@@ -22,7 +22,7 @@ export const Contact = () => {
     e.preventDefault();
 
     try {
-      // Implement the API endpoint for handling suggestions
+
       const response = await fetch('http://localhost:3302/submitSuggestion', {
         method: 'POST',
         headers: {
@@ -45,70 +45,96 @@ export const Contact = () => {
   };
 
   return (
-    <Container className="mt-4">
-      <Row className="mt-3">
+    <Container className="mt-5">
+      <h3>Contact Details</h3>
+      <Row className="mt-5">
         <Col xs={3}>
           <h4> Martial Art Academy</h4>
           <p>Customers of ANG Martial Arts Academy are welcome to review this website. Tell me how you good and needful this mission.</p>
-          </Col>
+        </Col>
         <Col xs={3}>
           <h4>Address</h4>
-          </Col>
+          <p>East Mumbai, NY 10012, INDIA</p>
+        </Col>
         <Col xs={3}>
-          <h4>Phone Number</h4>
-          </Col>
+          <h4>Phone Number and Email</h4>
+          <p> martialart@email.com</p>
+          <p>+ 01 234 567 88</p>
+          <p>+ 01 234 567 89</p>
+        </Col>
         <Col xs={3}>
           <h4>Social Media Links</h4>
-          </Col>
-        <Col>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group controlId="formName">
-              <Form.Label>Your Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter your name"
-                name="name"
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-            <Form.Group controlId="formEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="Enter email"
-                name="email"
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-            <Form.Group controlId="formSuggestion">
-              <Form.Label>Suggestion</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                placeholder="Enter your suggestion"
-                name="suggestion"
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-            <Form.Group controlId="formGrievance">
-              <Form.Label>Grievance</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                placeholder="Enter your grievance"
-                name="grievance"
-                onChange={handleChange}
-                required
-              />
-            </Form.Group>
-            <Button variant="primary" type="submit">
-              Submit
-            </Button>
-          </Form>
+          <p>
+            <a href='https://www.linkedin.com/' className='text-reset'>
+              linkedin
+            </a>
+          </p>
+          <p>
+            <a href='https://www.facebook.com/' className='text-reset'>
+              Facebook
+            </a>
+          </p>
+          <p>
+            <a href='https://www.Instagram.com/' className='text-reset'>
+              Instagram
+            </a>
+          </p>
+          <p>
+            <a href='https://www.twitter.com/' className='text-reset'>
+              Twitter
+            </a>
+          </p>
         </Col>
+        <Col className="mt-5">
+          <h3>Suggestion/Grievance Form</h3>
+        </Col>
+        <Form onSubmit={handleSubmit} className="mt-5">
+          <Form.Group controlId="formName">
+            <Form.Label>Your Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter your name"
+              name="name"
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              name="email"
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formSuggestion">
+            <Form.Label>Suggestion</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="Enter your suggestion"
+              name="suggestion"
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Form.Group controlId="formGrievance">
+            <Form.Label>Grievance</Form.Label>
+            <Form.Control
+              as="textarea"
+              rows={3}
+              placeholder="Enter your grievance"
+              name="grievance"
+              onChange={handleChange}
+              required
+            />
+          </Form.Group>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
       </Row>
     </Container>
   );
