@@ -1,5 +1,5 @@
 import { Button, Card, Col, Container, Row } from "react-bootstrap";
-import img1 from '../images/karate1.jpeg'
+import img1 from '../images/gym.jpeg'
 import img2 from '../images/swim.jpeg'
 import img3 from '../images/court.jpeg'
 import img4 from '../images/supplement.jpg'

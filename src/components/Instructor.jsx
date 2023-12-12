@@ -71,7 +71,7 @@ export function Instructor() {
           </Accordion.Body>
         </Accordion.Item>
         <Accordion.Item eventKey="3">
-          <Accordion.Header>Numair shaikh</Accordion.Header>
+          <Accordion.Header>Numair Shaikh</Accordion.Header>
           <Accordion.Body>
             <img
               style={{ height: "50vh" }}
