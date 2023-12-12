@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NavigationBar } from "./components/NavigationBar";
-import { Home } from "./style/Home";
+import { Home } from "./components/Home";
 import { Instructor } from "./components/Instructor";
 import { Facilities } from "./components/Facilities";
 import { RegistrationForm } from "./components/RegistrationForm";
 import { Contact } from "./components/Contact";
-import { Footer } from "./style/Footer";
+import { Footer } from "./components/Footer";
 import { Courses } from "./components/Courses";
 function App() {
   return (
